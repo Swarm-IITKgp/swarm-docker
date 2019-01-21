@@ -36,14 +36,14 @@ docker run -it --privileged \
     --env=LOCAL_USER_ID="$(id -u)" \
     -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
     -e DISPLAY=:0 \
-    --name=swarm-docker swarm -docker /bin/bash;
+    --name=swarm-docker swarm-docker /bin/bash;
 ```
 - Exit the dontainer.
 - To use this container.
 ```sh
 xhost +;
-sudo docker start <container_name>;
-sudo docker exec -u 0 -it <container_name> bash
+sudo docker start swarm-docker;
+sudo docker exec -u 0 -it swarm-docker bash
 ```
 
 > Follow [these instructions](http://gernotklingler.com/blog/howto-get-hardware-accelerated-opengl-support-docker/) in case of any graphics driver issues.
