@@ -9,7 +9,7 @@ ENV https_proxy='http://172.16.2.30:8080/'
 #RUN echo "Acquire::http::proxy \"http://172.16.2.30:8080/\";" >> /etc/apt/apt.conf
 #RUN echo "Acquire::https::proxy \"http://172.16.2.30:8080/\";" >> /etc/apt/apt.conf
 
-RUN apt-get update && apt-get install -y apt-transport-https
+RUN apt-get update && apt-get install -y apt-transport-https apt-utils
 
 # install ros packages
 RUN apt-get update && apt-get install -y \
