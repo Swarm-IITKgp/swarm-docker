@@ -27,7 +27,7 @@ Go through [this](https://docs.docker.com/install/linux/linux-postinstall/) page
 - Clone this repository and change the working directory to ```swarm-docker```.
 - Build docker image using ```Dockerfile```.
 ```sh
-docker build --tag=swarm-docker .
+docker build --tag=swarm-docker - < Dockerfile
 ```
 - Create container.
 ```sh
